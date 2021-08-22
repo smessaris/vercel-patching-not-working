@@ -1,0 +1,12 @@
+diff --git a/node_modules/next/dist/server/next-server.js b/node_modules/next/dist/server/next-server.js
+index c5d681f..7e5e9e6 100644
+--- a/node_modules/next/dist/server/next-server.js
++++ b/node_modules/next/dist/server/next-server.js
+@@ -160,6 +160,7 @@ class Server {
+         console.error(err);
+     }
+     async handleRequest(req, res, parsedUrl) {
++        res.setHeader('X-PATCHING-WORKS', 'PATCHED');
+         var ref3, ref4, ref5, ref6, ref7, ref8;
+         const urlParts = (req.url || '').split('?');
+         const urlNoQuery = urlParts[0];
